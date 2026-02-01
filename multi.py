@@ -20,3 +20,15 @@ result = df_all.groupby("area")["price"].sum().reset_index()
 result.to_excel("all_total.xlsx", index=False)
 
 print("完了！")
+
+##all_total.xlsx が作成されます
+
+## 想定用途
+
+- 売上管理
+- データ整理
+- 業務の自動化
+
+## 制作者
+
+inari-auto
