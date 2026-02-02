@@ -1,13 +1,25 @@
 import tkinter as tk
 import subprocess
+import os
 
-def run():
-    subprocess.run(["python3", "multi.py"])
+base_dir = os.path.dirname(os.path.abspath(__file__))
+
+def run_main():
+    subprocess.run(["python3", os.path.join(base_dir, "main.py")])
+
+def run_multi():
+    subprocess.run(["python3", os.path.join(base_dir, "multi.py")])
+
+def run_filter():
+    subprocess.run(["python3", os.path.join(base_dir, "filter.py")])
 
 root = tk.Tk()
-root.title("自動集計ツール")
+root.title("CSV自動集計ツール")
 
-btn = tk.Button(root, text="実行", command=run)
-btn.pack(padx=30, pady=30)
+tk.Label(root, text="処理を選択してください").pack(pady=10)
+
+tk.Button(root, text="金額フィルター集計", width=25, command=run_main).pack(pady=5)
+tk.Button(root, text="一括集計（全CSV）", width=25, command=run_multi).pack(pady=5)
+tk.Button(root, text="月・エリア集計", width=25, command=run_filter).pack(pady=5)
 
 root.mainloop()

@@ -7,28 +7,21 @@ os.chdir(base_dir)
 
 files = glob.glob("data/*.csv")
 
+# CSVなかった場合
+if not files:
+    print("dataフォルダにCSVがありません")
+    exit()
+
 all_data = []
 
 for file in files:
     df = pd.read_csv(file)
     all_data.append(df)
 
-df_all = pd.concat(all_data)
+df_all = pd.concat(all_data, ignore_index=True)
 
 result = df_all.groupby("area")["price"].sum().reset_index()
 
 result.to_excel("all_total.xlsx", index=False)
 
-print("完了！")
-
-##all_total.xlsx が作成されます
-
-## 想定用途
-
-- 売上管理
-- データ整理
-- 業務の自動化
-
-## 制作者
-
-inari-auto
+print("完了！ all_total.xlsx を作成しました")
