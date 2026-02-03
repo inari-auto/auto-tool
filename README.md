@@ -30,7 +30,7 @@ CSVの集計・整理・Excel出力・条件指定対応まで可能。
 1. dataフォルダに集計したいCSVファイルを入れる
 2. ターミナルで以下を実行
 
-# 実行例
+## 実行例
 $ python3 app.py
 
 ## 実行画面
@@ -43,5 +43,5 @@ $ python3 app.py
 ### 出力結果
 ![Result](screenshots/result.png)
 
-# 結果
+## 結果
 all_total.xlsx が作成されます
