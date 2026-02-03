@@ -1,9 +1,9 @@
-# CSV 自動集計ツール（auto-tool）
+z# CSV 自動集計ツール（auto-tool）
 
 このツールは、複数のCSVファイルをまとめて集計し、
 Excelファイル（.xlsx）として出力するPythonツールです。
-
-業務でよくある「CSV集計・整理作業」を自動化できます。
+CSVの集計・整理・Excel出力・条件指定対応まで可能。
+実務のExcel作業を大幅に自動化します。
 
 ---
 
@@ -30,5 +30,18 @@ Excelファイル（.xlsx）として出力するPythonツールです。
 1. dataフォルダに集計したいCSVファイルを入れる
 2. ターミナルで以下を実行
 
-```bash
-python3 app.py
+# 実行例
+$ python3 app.py
+
+## 実行画面
+
+### GUI画面
+![GUI](screenshots/gui.png)
+
+一括集計を押すと↓↓↓
+
+### 出力結果
+![Result](screenshots/result.png)
+
+# 結果
+all_total.xlsx が作成されます
