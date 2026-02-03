@@ -1,4 +1,4 @@
-z# CSV 自動集計ツール（auto-tool）
+# CSV 自動集計ツール（auto-tool）
 
 このツールは、複数のCSVファイルをまとめて集計し、
 Excelファイル（.xlsx）として出力するPythonツールです。
