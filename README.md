@@ -31,7 +31,7 @@ CSVの集計・整理・Excel出力・条件指定対応まで可能。
 2. ターミナルで以下を実行
 
 ## 実行例
-$ python3 app.py
+% python3 app.py
 
 ## 実行画面
 
